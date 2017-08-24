@@ -1,0 +1,15 @@
+<package>
+  <name>tk_spline_catkin</name>
+  <version>1.0.0</version>
+  <description>ceres_catkin</description>
+  <maintainer email="ttk448@gmail.com">Tino Kluge</maintainer>
+
+  <license>GPL 2.0</license>
+
+  <url type="website">http://kluge.in-chemnitz.de/opensource/spline/</url>
+
+  <author>Tino Kluge</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>catkin_simple</buildtool_depend>
+</package>
