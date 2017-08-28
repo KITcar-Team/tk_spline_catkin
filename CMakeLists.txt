@@ -14,6 +14,7 @@ file(MAKE_DIRECTORY ${CATKIN_DEVEL_PREFIX}/include)
 
 ExternalProject_Add(tk_spline_src
   GIT_REPOSITORY https://github.com/cwecht/spline.git
+  GIT_TAG ce13872eb1f47fd6c57d80bd847cf86856d78f53
   CONFIGURE_COMMAND ""
   BUILD_COMMAND ""
   INSTALL_COMMAND rm -rf ${CATKIN_DEVEL_PREFIX}/include/tk_spline_catkin && mkdir ${CATKIN_DEVEL_PREFIX}/include/tk_spline_catkin && cp ../tk_spline_src/src/spline.h ${CATKIN_DEVEL_PREFIX}/include/tk_spline_catkin/
