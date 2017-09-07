@@ -10,18 +10,18 @@ set(VERSION 1.0.0)
 
 # The configure step fails at catkin_package() if this directory
 # doesn't exist yet. Create it at configure time!
-file(MAKE_DIRECTORY ${CATKIN_DEVEL_PREFIX}/include)
+file(MAKE_DIRECTORY ${CATKIN_DEVEL_PREFIX}/include/tk_spline_catkin)
 
 ExternalProject_Add(tk_spline_src
   GIT_REPOSITORY https://github.com/KITcar-Team/spline.git
   GIT_TAG ce13872eb1f47fd6c57d80bd847cf86856d78f53
   CONFIGURE_COMMAND ""
   BUILD_COMMAND ""
-  INSTALL_COMMAND rm -rf ${CATKIN_DEVEL_PREFIX}/include/tk_spline_catkin && mkdir ${CATKIN_DEVEL_PREFIX}/include/tk_spline_catkin && cp ../tk_spline_src/src/spline.h ${CATKIN_DEVEL_PREFIX}/include/tk_spline_catkin/
+  INSTALL_COMMAND rm -rf ${CATKIN_DEVEL_PREFIX}/include/tk_spline_catkin/* && cp ../tk_spline_src/src/spline.h ${CATKIN_DEVEL_PREFIX}/include/tk_spline_catkin/
 )
 
 include_directories(${CATKIN_DEVEL_PREFIX}/include/)
 
 cs_install()
 
-cs_export()
+cs_export(INCLUDE_DIRS ${CATKIN_DEVEL_PREFIX}/include)
